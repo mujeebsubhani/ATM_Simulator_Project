@@ -18,6 +18,15 @@ def admin_display(name)
     a_obj.add_new_admin()
   elsif choice == 2
     a_obj.display_from_db()
+  else
+    print("Not Found. \n\n")
+    print("Please 'N' to finish : ")
+    choice = gets.chomp()
+    if choice.to_s != 'N'
+      main_display()
+    else
+      print("Thank you .")
+    end
   end
   end
 
@@ -35,6 +44,15 @@ def main_display
     if initiate_admin_panel(admin_pin) != nil
       name, id, pin = initiate_admin_panel(admin_pin)
       admin_display(name)
+    end
+  else
+    print("Not Found. \n\n")
+    print("Please 'N' to finish : ")
+    choice = gets.chomp()
+    if choice.to_s != 'N'
+      main_display()
+    else
+      print("Thank you .")
     end
   end
 end
