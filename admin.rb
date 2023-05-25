@@ -63,7 +63,6 @@ class Admin
 
 end
 
-
 def initiate_admin_panel(admin_pin)
 
   if db_verification('admin_db', admin_pin) == true
